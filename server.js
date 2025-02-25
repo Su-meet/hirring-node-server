@@ -35,9 +35,9 @@ io.on("connection", (socket) => {
     });
 
     // Handle ICE candidates
-    socket.on("ice-candidate", (candidate) => {
+    socket.on("iceCandidate", (candidate) => {
         console.log("Received ICE candidate from:", socket.id);
-        socket.broadcast.emit("ice-candidate", candidate);
+        socket.broadcast.emit("iceCandidate", candidate);
     });
 
     socket.on("disconnect", () => {
